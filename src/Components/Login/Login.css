@@ -1,0 +1,27 @@
+.Login{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2% 5%;
+    width: 50vh;
+    height: 50vh;
+    background-color: white;
+    border-radius: 2%;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 60%;
+}
+
+@media screen and (orientation:portrait) {
+    .Login{
+        width: 75vw;
+        height: 75vh;
+        padding: 5%;
+    }
+}
