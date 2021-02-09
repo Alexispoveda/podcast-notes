@@ -8,7 +8,7 @@ import './BottomNav.css'
 const BottomNav = props =>
 
     <Box className="BottomNav">
-        <BottomNavigation value={props.tab} onChange={props.onChange}>
+        <BottomNavigation value={props.tab} onChange={props.onChange} >
             <BottomNavigationAction label="Cuenta" value="/menu/profile" icon={<AccountCircleTwoToneIcon />} />
             <BottomNavigationAction label="Episodios" value="/menu/episodes" icon={<MenuBookTwoToneIcon />} />
         </BottomNavigation>

@@ -159,7 +159,7 @@ const Notes = props => {
                 }
             </List>
 
-            <Fab onClick={()=>openEditor('add')} style={{margin: 0,top: 'auto',right: 30,bottom: 90,left: 'auto',position: 'fixed',zIndex:2, backgroundColor:'lightgreen'}}>
+            <Fab onClick={()=>openEditor('add')} style={{margin: 0,top: 'auto',right: 30,bottom: 90,left: 'auto',position: 'fixed',zIndex:2, backgroundColor:'#03989E', color:'whitesmoke'}}>
                 <AddIcon />
             </Fab>
 
