@@ -5,7 +5,7 @@ import React, { useEffect, useState, createContext } from "react";
 import {auth} from "./firebase";
 
 //Loading
-import Loading from '../Components/Loading/Loading'
+import Loading from '../Components/Loading/Loading';
 
 //Export Context
 export const UserContext = createContext();
@@ -17,8 +17,13 @@ export const UserProvider = ({ children }) => {
 
     useEffect(() => {
         auth.onAuthStateChanged(user => {
-            setCurrentUser(user)
-            setPending(false)
+            if(!user){
+                setCurrentUser(null);
+            }
+            else{
+                setCurrentUser({user: user, verified: user.emailVerified});
+            }
+            setPending(false);
         });
     }, []);
 

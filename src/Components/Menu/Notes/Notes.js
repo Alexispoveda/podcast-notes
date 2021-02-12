@@ -35,7 +35,7 @@ const Notes = props => {
 
         episodiosCollection.get()
             .then(episodio=>{
-                const userReference = db.collection('usuarios').doc(currentUser.uid);
+                const userReference = db.collection('usuarios').doc(currentUser.user.uid);
                 const notesReference = db.collection('episodios').doc(episodio.docs[0].id).collection('comentarios');
 
                 const publicNotes = notesReference.where('publico','==',true);
@@ -115,7 +115,7 @@ const Notes = props => {
 
         episodiosCollection.get()
             .then(episodio=>{
-                const userReference = db.collection('usuarios').doc(currentUser.uid);
+                const userReference = db.collection('usuarios').doc(currentUser.user.uid);
                 const notesReference = db.collection('episodios').doc(episodio.docs[0].id).collection('comentarios');
 
                 if(EditorState.new){
@@ -153,7 +153,7 @@ const Notes = props => {
                         <ListItem divider key={comentario.id}>
                             <ListItemAvatar><Avatar>{comentario.publico ? comentario.autor.slice(0,2).toUpperCase() : <LockIcon/>}</Avatar></ListItemAvatar>
                             <ListItemText primary={comentario.comentario} secondary={comentario.autor}/>
-                            {comentario.autorUID === currentUser.uid ? <ListItemSecondaryAction onClick={()=>openEditor('edit',comentario)}><IconButton><EditIcon/></IconButton></ListItemSecondaryAction> : null}
+                            {comentario.autorUID === currentUser.user.uid ? <ListItemSecondaryAction onClick={()=>openEditor('edit',comentario)}><IconButton><EditIcon/></IconButton></ListItemSecondaryAction> : null}
                         </ListItem>
                     )
                 }

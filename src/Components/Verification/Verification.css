@@ -1,0 +1,19 @@
+.Verification{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 2% 5%;
+    width: 50vh;
+    height: 50vh;
+    background-color: white;
+    border-radius: 2%;
+}
+
+@media screen and (orientation:portrait) {
+    .Verification{
+        width: 75vw;
+        height: 75vh;
+        padding: 5%;
+    }
+}

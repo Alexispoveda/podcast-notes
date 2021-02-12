@@ -13,7 +13,7 @@ const PrivateRoute = ({component: Component, ...rest}) => {
 
     return (
         <Route {...rest} render={props => (
-            !!currentUser ?
+            !!currentUser && currentUser.verified ?
                 <Component {...props} {...rest}/>
             : <Redirect to="/acceder" />
             )} 
