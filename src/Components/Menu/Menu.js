@@ -20,7 +20,7 @@ import BottomNav from './BottomNav/BottomNav';
 
 const Menu = props =>{
 
-    const [TabState, setTabState] = useState('/menu/episodes');
+    const [TabState, setTabState] = useState(window.location.pathname);
 
     const handleTabChange = (_, tab) =>{
         props.history.push(tab)
