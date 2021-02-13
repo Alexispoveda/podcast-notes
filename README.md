@@ -9,8 +9,9 @@ Simple React App for taking notes of the Bible in a year podcast from Father Mik
 - [x] Sign Up
 - [x] Check is user is verified
 - [x] Change Password
-- [ ] Profile tab
+- [x] Profile tab
 - [ ] Spotify player
+- [ ] Change email from profile tab
 - [ ] Bonus episodes
-- [ ] Check if listened
-- [ ] Reminders
+- [ ] Checkbox for episodes listened
+- [ ] Reminders (push notifications)
