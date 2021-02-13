@@ -14,13 +14,13 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #004272;
+  background-color: rgba(208, 179, 74, .6) ;
 }
 
 h1{
   font-family: trenda,Century Gothic,sans-serif;
   text-align: center;
-  color: #00233c;
+  color: #00233C;
   font-weight: 500;
   font-style: normal;
   text-transform: uppercase;

@@ -146,11 +146,11 @@ const Notes = props => {
 
     return(
         <Box className="Notes">
-            <List style={{width:'100%',height:'100%',padding:0,backgroundColor:'whitesmoke'}}>
+            <List style={{width:'100%',height:'100%',padding:0}}>
             <ListSubheader style={{backgroundColor:'white'}}>{'Comentarios del día '+props.match.params.episode}</ListSubheader>
                 {
                     NotesState.map(comentario=>
-                        <ListItem divider key={comentario.id}>
+                        <ListItem divider key={comentario.id} style={{backgroundColor:'whitesmoke'}}>
                             <ListItemAvatar><Avatar>{comentario.publico ? comentario.autor.slice(0,2).toUpperCase() : <LockIcon/>}</Avatar></ListItemAvatar>
                             <ListItemText primary={comentario.comentario} secondary={comentario.autor}/>
                             {comentario.autorUID === currentUser.user.uid ? <ListItemSecondaryAction onClick={()=>openEditor('edit',comentario)}><IconButton><EditIcon/></IconButton></ListItemSecondaryAction> : null}
@@ -159,7 +159,7 @@ const Notes = props => {
                 }
             </List>
 
-            <Fab onClick={()=>openEditor('add')} style={{margin: 0,top: 'auto',right: 30,bottom: 90,left: 'auto',position: 'fixed',zIndex:2, backgroundColor:'#03989E', color:'whitesmoke'}}>
+            <Fab onClick={()=>openEditor('add')} style={{margin: 0,top: 'auto',right: 30,bottom: 90,left: 'auto',position: 'fixed',zIndex:2, backgroundColor:'#00233C', color:'whitesmoke'}}>
                 <AddIcon />
             </Fab>
 

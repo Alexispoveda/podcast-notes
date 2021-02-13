@@ -21,7 +21,7 @@ const Episodes = props =>{
 
     useEffect(()=>{
 
-        db.collection('episodios').orderBy('dia').get()
+        db.collection('episodios').orderBy('dia','desc').get()
             .then(snapshot=>setEpisodesState(snapshot.docs.map(episodio=>episodio.data())))
             .then(()=>setLoadingState(false));
     },[])
@@ -41,9 +41,9 @@ const Episodes = props =>{
             <List style={{width:'100%',height:'100%',padding:0}}>
                 {
                     EpisodesState.map(episodio=>
-                        <ListItem divider style={{backgroundColor:'whitesmoke'}} key={episodio.dia} onClick={()=>openNotes(episodio.dia)}>
-                            <ListItemIcon><IconButton onClick={()=>playOnSpotify(episodio.spotify)}><PlayIcon/></IconButton></ListItemIcon>
-                            <ListItemText primary={'Día '+episodio.dia} secondary={episodio.titulo}/>
+                        <ListItem divider style={{backgroundColor:'rgba(245,245,245,.9)'}} key={episodio.dia} onClick={()=>openNotes(episodio.dia)}>
+                            <ListItemIcon><IconButton onClick={()=>playOnSpotify(episodio.spotify)}><PlayIcon style={{color:'#00233C'}}/></IconButton></ListItemIcon>
+                            <ListItemText primary={'Día '+episodio.dia} secondary={episodio.titulo} style={{color:'#00233C'}}/>
                         </ListItem>
                     )
                 }
