@@ -15,3 +15,8 @@ Simple React App for taking notes of the Bible in a year podcast from Father Mik
 - [ ] Bonus episodes
 - [ ] Checkbox for episodes listened
 - [ ] Reminders (push notifications)
+
+
+## Public test account
+user: bibleinayearnotes@alexispoveda.com
+password: password
